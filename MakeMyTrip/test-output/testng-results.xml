@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="1" total="4" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="101711" started-at="2020-12-15T13:57:28Z" finished-at="2020-12-15T13:59:09Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="101711" started-at="2020-12-15T13:57:28Z" finished-at="2020-12-15T13:59:09Z">
+      <class name="testCases.MakeMyTrip">
+        <test-method status="PASS" signature="start()[pri:0, instance:testCases.MakeMyTrip@46d56d67]" name="start" is-config="true" duration-ms="18873" started-at="2020-12-15T13:57:28Z" finished-at="2020-12-15T13:57:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- start -->
+        <test-method status="PASS" signature="searchFlights()[pri:1, instance:testCases.MakeMyTrip@46d56d67]" name="searchFlights" duration-ms="15827" started-at="2020-12-15T13:57:47Z" finished-at="2020-12-15T13:58:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchFlights -->
+        <test-method status="PASS" signature="nonStopAndOneStopFlights()[pri:2, instance:testCases.MakeMyTrip@46d56d67]" name="nonStopAndOneStopFlights" duration-ms="6891" started-at="2020-12-15T13:58:03Z" finished-at="2020-12-15T13:58:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- nonStopAndOneStopFlights -->
+        <test-method status="PASS" signature="verifyTotalPrice()[pri:4, instance:testCases.MakeMyTrip@46d56d67]" name="verifyTotalPrice" duration-ms="60036" started-at="2020-12-15T13:58:09Z" finished-at="2020-12-15T13:59:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTotalPrice -->
+      </class> <!-- testCases.MakeMyTrip -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="742" started-at="2020-11-26T11:41:39Z" finished-at="2020-11-26T11:41:39Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="TestRun.feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRun.TestRun@3f49dace]" name="feature" class="TestRun.TestRun"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Default test" duration-ms="742" started-at="2020-11-26T11:41:39Z" finished-at="2020-11-26T11:41:39Z">
+      <class name="TestRun.TestRun">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:TestRun.TestRun@3f49dace]" name="setUp" is-config="true" duration-ms="500" started-at="2020-11-26T11:41:39Z" finished-at="2020-11-26T11:41:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="feature(cucumber.api.testng.CucumberFeatureWrapper)[pri:0, instance:TestRun.TestRun@3f49dace]" name="feature" duration-ms="117" started-at="2020-11-26T11:41:39Z" description="Runs Cucumber Feature" data-provider="sample" finished-at="2020-11-26T11:41:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[practicing Hooks and Background]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- feature -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:TestRun.TestRun@3f49dace]" name="tearDown" is-config="true" duration-ms="16" started-at="2020-11-26T11:41:39Z" finished-at="2020-11-26T11:41:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestRun.TestRun -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,23 @@
+package seleniumRevision;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class WindowsHandlingExample {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "E:\\SeleniumBackup\\LearnAutomation\\src\\seleniumRevision\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("http://demo.guru99.com/popup.php");
+		WebElement insurance = driver.findElement(By.partialLinkText("Insurance"));
+		WebElement agile = driver.findElement(By.partialLinkText("Agile"));
+		WebElement ban = driver.findElement(By.partialLinkText("Ban"));
+		WebElement telecom = driver.findElement(By.partialLinkText("Telecom"));
+		
+		Actions actions=new Actions(driver);
+		actions.moveToElement(insurance).contextClick(insurance).build().perform();
+		
+	}
+}

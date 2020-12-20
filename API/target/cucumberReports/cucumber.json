@@ -1,0 +1,156 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-11-23T18:27:42.826Z",
+        "line": 2,
+        "name": "verifying JIRA create issue",
+        "description": "",
+        "id": "jira-api-validation;verifying-jira-create-issue",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1068000000,
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "Add the JIRA to create API payload",
+            "match": {
+              "location": "stepDef.createIssue.add_the_JIRA_to_create_API_payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4690000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "user should call the JIRA create issue API with post request",
+            "match": {
+              "location": "stepDef.createIssue.user_should_call_the_JIRA_create_issue_API_with_post_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 22000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user should verify responsecode should be 201",
+            "match": {
+              "arguments": [
+                {
+                  "val": "201",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDef.createIssue.user_should_verify_responsecode_should_be(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 162000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user should verify responsebody self should contain \"senthilautomation\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "senthilautomation",
+                  "offset": 53
+                }
+              ],
+              "location": "stepDef.createIssue.user_should_verify_responsebody_self_should_contain(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-11-23T18:27:49.040Z",
+        "line": 8,
+        "name": "verifying JIRA get issues",
+        "description": "",
+        "id": "jira-api-validation;verifying-jira-get-issues",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Add the JIRA to create API payload",
+            "match": {
+              "location": "stepDef.createIssue.add_the_JIRA_to_create_API_payload()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1306000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "user should call the JIRA get issue API with post request",
+            "match": {
+              "location": "stepDef.createIssue.user_should_call_the_JIRA_get_issue_API_with_post_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "user should verify getresponsecode should be 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 45
+                }
+              ],
+              "location": "stepDef.createIssue.user_should_verify_getresponsecode_should_be(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "junit.framework.AssertionFailedError: verified total expected:\u003c12\u003e but was:\u003c18\u003e\r\n\tat junit.framework.Assert.fail(Assert.java:57)\r\n\tat junit.framework.Assert.failNotEquals(Assert.java:329)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:78)\r\n\tat junit.framework.Assert.assertEquals(Assert.java:234)\r\n\tat stepDef.createIssue.user_should_verify_responsebody_total_should_be(createIssue.java:71)\r\n\tat ✽.user should verify responsebody total should be 12(file:///E:/Seleniumnew/API/src/test/java/feautres/API_auto.feature:12)\r\n",
+              "duration": 207000000,
+              "status": "failed"
+            },
+            "line": 12,
+            "name": "user should verify responsebody total should be 12",
+            "match": {
+              "arguments": [
+                {
+                  "val": "12",
+                  "offset": 48
+                }
+              ],
+              "location": "stepDef.createIssue.user_should_verify_responsebody_total_should_be(int)"
+            },
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "JIRA API validation",
+    "description": "",
+    "id": "jira-api-validation",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/feautres/API_auto.feature",
+    "tags": []
+  }
+]

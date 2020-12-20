@@ -1,0 +1,81 @@
+package seleniumRevision;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class WindowsHandlingExample {
+	public static void main(String[] args) throws AWTException, InterruptedException {
+		System.setProperty("webdriver.chrome.driver", "E:\\SeleniumBackup\\LearnAutomation\\src\\seleniumRevision\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("http://demo.guru99.com/popup.php");
+		WebElement insurance = driver.findElement(By.partialLinkText("Insurance"));
+		WebElement agile = driver.findElement(By.partialLinkText("Agile"));
+		WebElement ban = driver.findElement(By.partialLinkText("Ban"));
+		WebElement telecom = driver.findElement(By.partialLinkText("Telecom"));
+		
+		Actions actions=new Actions(driver);
+		actions.moveToElement(insurance).contextClick(insurance).build().perform();
+		Robot r=new Robot();
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+		
+		actions.moveToElement(ban).contextClick(ban).build().perform();
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+		
+		actions.moveToElement(agile).contextClick(agile).build().perform();
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+		
+		actions.moveToElement(insurance).contextClick(insurance).build().perform();
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+		
+		actions.moveToElement(telecom).contextClick(telecom).build().perform();
+		r.keyPress(KeyEvent.VK_DOWN);
+		r.keyRelease(KeyEvent.VK_DOWN);
+		r.keyPress(KeyEvent.VK_ENTER);
+		r.keyRelease(KeyEvent.VK_ENTER);
+		
+		String parentId = driver.getWindowHandle();
+		System.out.println("parent "+parentId);
+		String parentTitle = driver.switchTo().window(parentId).getTitle();
+		
+		
+		Set<String> allId = driver.getWindowHandles();
+		for (String id : allId) {
+			String title = driver.switchTo().window(id).getTitle();
+			System.out.println(title);
+		}
+		/*Guru99 Bank Home Page
+		Guru99 Telecom
+		Insurance Broker System - Login
+		Guru99 Bank Home Page
+		GTPL Bank Home Page
+		Insurance Broker System - Login*/
+		String t="GTPL Bank Home Page";
+				
+		if(driver.switchTo().window(t).getTitle().equals("GTPL Bank Home Page"))
+		Thread.sleep(3000);
+		driver.close();
+		System.out.println("am closed ban window");
+		
+	}
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employee>
+<id>01</id>
+<name>sathiya</name>
+<mobile>9876543210</mobile>
+<email>sathiya@123</email>
+<address>
+	<tempaddress>
+				<street>Old Street</street>
+				<district>Trichy</district>
+				<state>tn</state>
+	</tempaddress>
+	<peraddress>
+				<street>New Street</street>
+				<district>Chennai</district>
+				<state>tn</state>
+	</peraddress>
+</address>
+</employee>

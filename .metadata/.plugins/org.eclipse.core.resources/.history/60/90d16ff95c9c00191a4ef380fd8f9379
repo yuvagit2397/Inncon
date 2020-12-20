@@ -1,0 +1,54 @@
+package org.testjava;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+
+public class DataDrivenExample {
+
+	public static void toGetAllData(int value) throws Throwable {
+		
+		FileInputStream fin=new FileInputStream
+				("D:\\SeleniumBackup\\FirstTest\\src\\com\\Selenium\\Test\\exceldata.xlsx");
+		
+		Workbook wb=new XSSFWorkbook(fin);
+		Sheet sheet=wb.getSheet("sheet1");
+		int NumberOfRows = sheet.getPhysicalNumberOfRows();
+		for(int i=1;i<NumberOfRows;i++)
+		{
+			Row row = sheet.getRow(i);
+			
+			for(int j=0;j<row.getPhysicalNumberOfCells();j++)
+			{
+				
+				Cell cell = row.getCell(j);
+				String cellvalue=null;
+				if(cell.getCellType().equals(CellType.STRING))
+				{
+					 cellvalue = cell.getStringCellValue();
+				}else if(cell.getCellType().equals(CellType.NUMERIC))
+				{
+					double numeric = cell.getNumericCellValue();
+					long li=(long) numeric;
+					cellvalue = String.valueOf(li);
+		             
+		}
+				if(cellvalue.equals(value)){
+			
+      		String pass = row.getCell(value).getStringCellValue();
+				
+			System.out.println(pass);
+			
+		}}}}
+
+	public static void main(String[] args) throws Throwable {
+		toGetAllData(0);
+	}
+}

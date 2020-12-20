@@ -1,0 +1,36 @@
+package pom;
+
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class PricePom {
+	public static WebDriver driver;
+	
+	@FindBy(xpath="//div[@class='footer-fare']/p/span")
+	public static WebElement totalPrice;
+	public static WebElement getTotalPrice() {
+		return totalPrice;
+	}
+	
+	@FindBy(xpath="//div[@class='splitVw-footer-left']/div/descendant::div[2]/div/div[3]/p")
+	public static WebElement depConPrice;
+	public static WebElement getDepConPrice() {
+		return depConPrice;
+	}
+	
+	@FindBy(xpath="//div[@class='splitVw-footer-right']/div/descendant::div[2]/div/div[3]/p")
+	public static WebElement retConPrice;
+	public static WebElement getRetConPrice() {
+		return retConPrice;
+	}
+
+	public PricePom(WebDriver pdriver) {
+		this.driver=pdriver;
+		PageFactory.initElements(driver,this);
+	}
+
+}

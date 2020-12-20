@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="6" passed="6">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="41899" started-at="2020-12-09T12:29:43Z" finished-at="2020-12-09T12:30:25Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="41899" started-at="2020-12-09T12:29:43Z" finished-at="2020-12-09T12:30:25Z">
+      <class name="testCases.CapsuleCRM">
+        <test-method status="PASS" signature="getbrowser()[pri:0, instance:testCases.CapsuleCRM@4501b7af]" name="getbrowser" is-config="true" duration-ms="16905" started-at="2020-12-09T12:29:26Z" finished-at="2020-12-09T12:29:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getbrowser -->
+        <test-method status="PASS" signature="login()[pri:0, instance:testCases.CapsuleCRM@4501b7af]" name="login" duration-ms="5556" started-at="2020-12-09T12:29:43Z" finished-at="2020-12-09T12:29:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="addPerson()[pri:1, instance:testCases.CapsuleCRM@4501b7af]" name="addPerson" duration-ms="4615" started-at="2020-12-09T12:29:49Z" finished-at="2020-12-09T12:29:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPerson -->
+        <test-method status="PASS" signature="addingNewPersonForm()[pri:2, instance:testCases.CapsuleCRM@4501b7af]" name="addingNewPersonForm" duration-ms="8274" started-at="2020-12-09T12:29:53Z" finished-at="2020-12-09T12:30:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addingNewPersonForm -->
+        <test-method status="PASS" signature="verifyAddedPerson()[pri:3, instance:testCases.CapsuleCRM@4501b7af]" name="verifyAddedPerson" duration-ms="9100" started-at="2020-12-09T12:30:02Z" finished-at="2020-12-09T12:30:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddedPerson -->
+        <test-method status="PASS" signature="assigningCase()[pri:4, instance:testCases.CapsuleCRM@4501b7af]" name="assigningCase" duration-ms="12186" started-at="2020-12-09T12:30:11Z" finished-at="2020-12-09T12:30:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- assigningCase -->
+        <test-method status="PASS" signature="verifyCaseAssigning()[pri:5, instance:testCases.CapsuleCRM@4501b7af]" name="verifyCaseAssigning" duration-ms="2121" started-at="2020-12-09T12:30:23Z" finished-at="2020-12-09T12:30:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCaseAssigning -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.CapsuleCRM@4501b7af]" name="tearDown" is-config="true" duration-ms="1" started-at="2020-12-09T12:30:25Z" finished-at="2020-12-09T12:30:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.CapsuleCRM -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

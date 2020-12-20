@@ -1,0 +1,14 @@
+package pom;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class PricePom {
+	public static WebDriver driver;
+	
+	public PricePom(WebDriver pdriver) {
+		this.driver=pdriver;
+		PageFactory.initElements(driver,this);
+	}
+
+}

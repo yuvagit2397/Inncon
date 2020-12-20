@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<productDetails>
+				 <productName>iphone</productName>
+				<orderId>234</orderId>
+				<price>70000</price>
+				<qty>5</qty>
+		<deliveryAddress>
+						<street>newRoad</street>
+						<city>avadi</city>
+						<district>chennai</district>
+						<state>tn</state>
+				<contactDetails>
+				        <email>
+				        		<emailId>senthilAtgmaildotcom</emailId>
+				        </email>
+						<mobile>
+								<mobNo>9876543210</mobNo>
+								<landLineNo>044432112</landLineNo>
+						</mobile>
+				</contactDetails>
+		</deliveryAddress>
+</productDetails>

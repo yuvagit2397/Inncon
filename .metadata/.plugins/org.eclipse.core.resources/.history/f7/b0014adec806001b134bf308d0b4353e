@@ -1,0 +1,16 @@
+package jdbc_connection;
+
+import java.sql.Connection;
+
+public class JDBC_ConnectionExample {
+public static void main(String[] args) throws ClassNotFoundException {
+	
+	// Load the driver
+	Class.forName("com.mysql.jdbc.Driver");
+	
+	//connect to the database
+	
+
+	
+}
+}

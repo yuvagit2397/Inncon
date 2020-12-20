@@ -1,0 +1,159 @@
+package testCases;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.util.List;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import preRequisite.MyTripSetup;
+import singleton.PageObject;
+
+public class MakeMyTrip extends MyTripSetup {
+	//public static WebDriver driver;
+
+	@Test(priority = 1)
+	public void searchFlights() throws AWTException {
+		try {
+			WebElement loginPopup = PageObject.getHp().getLoginPopup();
+			if (loginPopup.isDisplayed() == true) {
+				PageObject.getHp().getPopupReturn().click();
+			}
+		} catch (Exception e) {
+		}
+		PageObject.getHp().getFromCity().click();
+		PageObject.getHp().getFromCityBox().sendKeys("Delhi");
+		PageObject.getHp().getToCity().click();
+		PageObject.getHp().getToCityBox().sendKeys("Bangalore");
+		PageObject.getHp().getDeparture().click();
+		PageObject.getHp().gettodayDate().click();
+		PageObject.getHp().getReturnArea().click();
+		PageObject.getHp().getreturnDate().click();
+		PageObject.getHp().getSearchBtn().click();
+
+		/*List<WebElement> depatureFlights = PageObject.getHp().getDepatureFlights();
+		System.out.println("Total no of Depature Filghts " + depatureFlights.size());
+		for (WebElement allDepFlights : depatureFlights) {
+			System.out.println(allDepFlights.getText());
+		}
+
+		List<WebElement> returnFlights = PageObject.getHp().getReturnFlights();
+		System.out.println("Total no of Return Filghts " + returnFlights.size());
+		for (WebElement allRetFlights : returnFlights) {
+			System.out.println(allRetFlights.getText());
+		}*/
+	} 
+
+	@Test(priority = 2)
+	public void nonStopAndOneStopFlights() throws InterruptedException {
+		List<WebElement> nonStopCheckBox = PageObject.getNsOs().getNonStopCheckBox();
+		nonStopCheckBox.get(1).click();
+		Thread.sleep(5000);
+		/*List<WebElement> nonStopDepFlights = PageObject.getNsOs().getNonStopDepFlights();
+		System.out.println("Total NonStop Fligts " + nonStopDepFlights.size());
+		for (WebElement nonStopDepFlight : nonStopDepFlights) {
+			System.out.println(nonStopDepFlight.getText());
+		}
+
+		List<WebElement> nonStopRetFlights = PageObject.getNsOs().getNonStopRetFlights();
+		System.out.println("Total no of NonStop Return Flights " + nonStopRetFlights.size());
+
+		for (WebElement nonStopRetFlight : nonStopRetFlights) {
+			System.out.println(nonStopRetFlight.getText());
+		}
+*/	}
+
+	@Test(priority = 3)
+	public void clickingRadioBtnOfFlights() throws InterruptedException {
+		List<WebElement> depFlightRadio = PageObject.getFd().getdepFlightRadio();
+		List<WebElement> depFlightName = PageObject.getFd().getdepFlightName();
+		WebElement depCoName = PageObject.getFd().getContainerFlightName();
+		
+		for (int i = 0; i < depFlightRadio.size(); i++) {
+			if (i<5) {
+				WebElement radio = depFlightRadio.get(i);
+				JavascriptExecutor js=(JavascriptExecutor) driver;
+				radio.click();
+				String text = depFlightName.get(i).getText();
+				System.out.println(" flight name "+text);
+				String text1 = depCoName.getText();
+				System.out.println(" container name "+text1);
+				js.executeScript("arguments[0].scrollIntoView();",radio);
+				Thread.sleep(1000);
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		/*System.out.println("total no of depature flight radio button = "+getdepFlightRadio.size());
+		int size = getdepFlightRadio.size();
+		for (int i = 0; i < getdepFlightRadio.size(); i++) {
+			if (i <= 9 ||size>0) {
+				String expected = depFlightRadioName.get(i).getText();
+				System.out.println("expected depature string"+expected);
+				WebElement radio = getdepFlightRadio.get(i);
+				JavascriptExecutor js=(JavascriptExecutor) driver;
+				js.executeScript("arguments[0].scrollIntoView();",radio);
+				Thread.sleep(1000);
+				radio.click();
+				Thread.sleep(2000);
+				String text = PageObject.getFd().getContainerFlightName().getText();
+				System.out.println("container String "+text);
+				Thread.sleep(1000);
+				Assert.assertEquals(true, text.contains(expected));
+				System.out.println("expected--->"+expected+" actual-->"+text);
+			}
+		}
+		
+		List<WebElement> returnFlightRadio = PageObject.getFd().getReturnFlightRadio();
+		List<WebElement> returnFlightRadioName = PageObject.getFd().getReturnFlightRadioName();
+		int size2 = returnFlightRadioName.size();
+		System.out.println("total no of return flight radio button = "+returnFlightRadio.size());
+		for (int i = 0; i < returnFlightRadio.size(); i++) {
+			if (i <= 9||size2>0) {
+				returnFlightRadio.get(i).click();
+				Thread.sleep(2000);
+				String returnExpec = returnFlightRadioName.get(i).getText();
+				System.out.println("expected return string"+returnExpec);
+				Thread.sleep(1000);
+				String text1 = PageObject.getFd().getContainerReturnFlightName().getText();
+				System.out.println("container string "+text1);
+				Thread.sleep(1000);
+				Assert.assertEquals(true, text1.contains(returnExpec));
+				System.out.println("expected--->"+returnExpec+" actual-->"+text1);
+			}
+			else {
+				//System.out.println("First 10 flights were clicked successfully");
+				break;
+			}
+		}*/
+	}
+
+}

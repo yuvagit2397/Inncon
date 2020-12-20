@@ -1,0 +1,37 @@
+package jdbc_connection;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class JDBC_ConnectionExample {
+public static void main(String[] args) throws ClassNotFoundException, SQLException {
+	
+	// Load the driver(jdbc-java database connection)
+	Class.forName("com.mysql.cj.jdbc.Driver");
+	
+	//connect to the database
+	Connection connection = DriverManager.getConnection("jdbc:mysql://localhost/paanai","root","asdf");
+
+	//prepare statement
+	
+	Statement createStatement = connection.createStatement();
+	
+	//write the query
+	
+	//String query="select * from employee";
+	
+	//execute th equery
+	
+	ResultSet rSet = createStatement.executeQuery("select * from employee");
+	while(rSet.next()) {
+		
+	System.out.println(rSet.getInt(1)+" "+rSet.getString(2)+" "+rSet.getInt(3)+" "+rSet.getInt(4));
+	
+	}
+	
+	connection.close();
+}
+}
